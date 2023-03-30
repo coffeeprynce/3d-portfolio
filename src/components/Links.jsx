@@ -1,6 +1,7 @@
 import React from 'react'
 import { styles } from '../styles'
 import { Link } from 'react-router-dom';
+import { SectionWrapper } from '../hoc';
 
 const Links = () => {
   return (
@@ -21,4 +22,4 @@ const Links = () => {
   )
 }
 
-export default Links
+export default SectionWrapper(Links, "links");

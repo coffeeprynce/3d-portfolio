@@ -56,7 +56,7 @@ const About = () => {
         className="mt-4 text-secondary text-[17px]
         max-w-3xl leading-[30px]"
         >
-          I am a skilled software developer with experience in HTML, CSS, Javascript,
+          Hi, My name is Quang "Kyle" Nguyen but everybody just calls me Kyle. I am a skilled software developer with experience in HTML, CSS, Javascript,
           and expertise in frameworks like React, and node.js.
         </motion.p>
 
