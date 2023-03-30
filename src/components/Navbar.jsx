@@ -4,11 +4,28 @@ import { Link } from 'react-router-dom';
 import { styles } from '../styles';
 import { navLinks } from '../constants';
 import { logo, menu, close } from '../assets'
+import coffeepryncelogo from '../assets/coffeepryncelogo.png';
 
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      if (scrollTop > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
    <nav
@@ -26,26 +43,26 @@ const Navbar = () => {
         window.scrollTo(0, 0);
       }}
       >
-        <img src={logo} alt="logo" className="w-9
-        h-9 object-contain"/>
+        <img src={coffeepryncelogo} alt="logo" className="w-15
+        h-12 object-contain"/>
         <p className="text-white text-[18px]
         font-bold cursor-pointer flex">Kyle &nbsp;
         <span className='sm:block hidden'>| Coffeeprynce </span></p>
       </Link>
         <ul className="list-none hidden sm:flex
         flex-row gap-10">
-          {navLinks.map((link) => (
+          {navLinks.map((nav) => (
             <li
-            key={link.id}
+            key={nav.id}
             className={`${
-              active === link.title
+              active === nav.title
               ? "text-white"
               : "text-secondary"
             } hover:text-white text-[18px]
             font-medium cursor-pointer`}
-            onClick={() => setActive(link.title)}
+            onClick={() => setActive(nav.title)}
             >
-              <a href={`#${link.id}`}>{link.title}</a>
+              <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
 
@@ -54,7 +71,7 @@ const Navbar = () => {
         <div className="sm:hidden flex flex-1
         justify-end items-center">
           <img
-          src={menu}
+          src={toggle ? close : menu}
           alt="menu"
           className="w-[28px] h-[28px]
           object-contain cursor-pointer"
@@ -69,21 +86,21 @@ const Navbar = () => {
              <ul className="list-none flex
              justify-end items-start flex-col gap-4
              ">
-          {navLinks.map((link) => (
+          {navLinks.map((nav) => (
             <li
-            key={link.id}
+            key={nav.id}
             className={`${
-              active === link.title
+              active === nav.title
               ? "text-white"
               : "text-secondary"
             } font-poppins font-medium cursor-pointer
             text-[16px]`}
             onClick={() => {
               setToggle(!toggle);
-              setActive(link.title)
+              setActive(nav.title)
             }}
             >
-              <a href={`#${link.id}`}>{link.title}</a>
+              <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
 

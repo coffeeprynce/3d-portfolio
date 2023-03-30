@@ -1,8 +1,10 @@
-import React from 'react'
+import { VerticalTimeline } from "react-vertical-timeline-component";
+
+
 
 const Experience = () => {
   return (
-    <div>Experience</div>
+    <div></div>
   )
 }
 

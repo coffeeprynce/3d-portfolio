@@ -40,8 +40,12 @@ const Servicecard = ({ index, title, icon }) => {
 
 const About = () => {
   return (
-    <>
-      <motion.div>
+    <div
+    className='overview'
+    >
+      <motion.div
+      className='modals'
+      >
         <p className={styles.sectionSubText}
         >Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview</h2>
@@ -52,8 +56,8 @@ const About = () => {
         className="mt-4 text-secondary text-[17px]
         max-w-3xl leading-[30px]"
         >
-          I'm a skilled software developer with experience in Typescript, Javascript,
-          and expertise in frameworks like Reactm node.js, and Three.js.
+          I am a skilled software developer with experience in HTML, CSS, Javascript,
+          and expertise in frameworks like React, and node.js.
         </motion.p>
 
         <div className="mt-20 flex flex-wrap gap-10">
@@ -63,7 +67,7 @@ const About = () => {
           ))}
 
         </div>
-    </>
+    </div>
   )
 }
 

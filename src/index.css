@@ -11,6 +11,16 @@
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
   color-scheme: dark;
+  color: #d6ecdd;
+}
+
+.modals {
+  margin-top: 100px;
+}
+
+.Lang {
+  justify-content: center;
+  font-size: 30px;
 }
 
 .hash-span {
@@ -20,7 +30,7 @@
 }
 
 .black-gradient {
-  background: #000000; /* fallback for old browsers */
+  background: #f4dddd; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
     #434343,
@@ -34,19 +44,20 @@
 }
 
 .violet-gradient {
-  background: #804dee;
-  background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
+  background: #95e8c7;
+  background: linear-gradient(-90deg, #53c07f 0%, rgba(60, 51, 80, 0) 100%);
   background: -webkit-linear-gradient(
     -90deg,
-    #804dee 0%,
+    #4dee88 0%,
     rgba(60, 51, 80, 0) 100%
   );
 }
 
+
 .green-pink-gradient {
   background: "#00cea8";
-  background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
-  background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+  background: linear-gradient(90.13deg, #69dbc6 1.9%, #61ff83 97.5%);
+  background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #d2afe9 97.5%);
 }
 
 .orange-text-gradient {
