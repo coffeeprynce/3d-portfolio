@@ -68,7 +68,7 @@ const About = () => {
 
         </div>
     </div>
-  )
-}
+  );
+};
 
 export default SectionWrapper(About, "about");
